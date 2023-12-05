@@ -293,38 +293,46 @@ h1.company-name {
 }
 //newsletter
 .newsletter {
-	padding: 8em 2em;
-	background-color: $red;
-	text-align: center;
-	&__text {
-		padding: 1em;
-		margin-bottom: 1em;
-		font-size: 4rem;
-		font-weight: 200;
-	}
-	&__form {
-		input {
-			margin-bottom: 1em;
-			padding: 1em;
-			width: 100%;
-			background-color: $white;
-			border: 1px solid transparent;
-		}
-		button {
-			padding: 1em;
-			border: 1px solid $gold;
-			background: none;
-			color: $gold;
-			font-weight: bold;
-			cursor: pointer;
-			transition: background-color 0.3s, color 0.3s;
-			&:hover {
-				color: $red;
-				background-color: $gold;
+	background: $dark;
+	.wrapper {
+		.reviews {
+			&__box {
+				position: relative;
+				margin: 2em;
+				padding: 2em;
+				border-radius: 8px;
+				box-shadow: 3px 3px 10px #2e2e2e2e;
+				transition: transform 0.3s;
+				&:hover {
+					transform: scale(0.95);
+				}
+			}
+			&__box-img {
+				position: absolute;
+				top: 8%;
+				left: 75%;
+				transform: translate(-50%, -50%);
+				img {
+					width: 80px;
+					height: 80px;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+			&__box-quote {
+				margin-bottom: 1em;
+				font-size: 3rem;
+				// color: $main-color;
+			}
+			&__box-text {
+				margin-bottom: 1em;
+				font-size: 1.4rem;
+				// color: $dark;
 			}
 		}
 	}
 }
+
 //gallery
 .gallery {
 	display: grid;
@@ -346,7 +354,6 @@ h1.company-name {
 //contact
 .contact {
 	padding: 6em 2em;
-
 }
 .footer {
 	font-family: 'Dancing Script', cursive;
